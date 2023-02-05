@@ -1,13 +1,24 @@
 <html>
 
 <head>
-    <script src="JsonToPowerFx.js">
-       
-    </script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="JsonToPowerFx.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
-    <textarea id="input" rows="5" cols="30">{
+
+    <div class="input-group, container-lg">
+        <textarea id="input" class="form-control, col" aria-label="With textarea">{
         "firstName": "John",
         "lastName": "Doe",
         "age": 35,
@@ -27,9 +38,17 @@
           }
         ]
       }</textarea>
-    <button onclick="runRemoveQuotes();">Remove Quotes</button>
-    <br />
-    <textarea id="output" rows="5" cols="30" readonly></textarea>
+        <button  class="btn btn-primary, col" onclick="runRemoveQuotes();">Remove Quotes</button>
+        <textarea id="output" class="form-control, col" type="text" rows="5" cols="30" readonly></textarea>
+    </div>
+
+    <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">With textarea</span>
+        </div>
+        <textarea class="form-control" aria-label="With textarea"></textarea>
+      </div>
+
 </body>
 
 </html>
